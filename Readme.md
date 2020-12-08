@@ -17,7 +17,12 @@ useradd netdrive
 ````
 # change shell to /bin/false
 nano /etc/passwd
-	netdrive:x:<uid>:<gid>::/home/netdrive:/bin/false
+````
+
+Change shell to ``/bin/false``
+
+````
+netdrive:x:<uid>:<gid>::/home/netdrive:/bin/false
 ````
 
 
@@ -28,6 +33,8 @@ nano /etc/passwd
 nano /etc/ssh/sshd_config
 ````
 
+add to the end
+
 ````
 AllowUsers [...] netdrive
 
@@ -37,6 +44,8 @@ Match User netdrive
   AllowTcpForwarding no
   X11Forwarding no
 ````
+
+Restart the service
 
 ````
 service sshd restart
