@@ -7,6 +7,12 @@
 The sftp username here is ``netdrive``.
 
 
+Switch to root:
+
+````
+sudo su
+````
+
 
 ## Create user
 
@@ -70,4 +76,12 @@ chmod 755 /home/netdrive/home/netdrive/
 passwd netdrive
 ````
 
+## SSH Key Auth
+
+````
+mkdir -p /home/netdrive/.ssh
+
+# add your keys to:
+nano /home/netdrive/.ssh/authorized_keys
+````
 
